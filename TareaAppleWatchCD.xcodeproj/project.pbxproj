@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		623AA8461C2746F70076D40A /* DatosPizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623AA8451C2746F70076D40A /* DatosPizza.swift */; };
+		623AA84A1C274BEF0076D40A /* TamañoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623AA8491C274BEF0076D40A /* TamañoController.swift */; };
+		623AA84C1C276AEB0076D40A /* MasaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623AA84B1C276AEB0076D40A /* MasaController.swift */; };
+		623AA84E1C2774820076D40A /* QuesoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623AA84D1C2774820076D40A /* QuesoController.swift */; };
+		623AA8501C277FCC0076D40A /* IngredientesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 623AA84F1C277FCC0076D40A /* IngredientesController.swift */; };
 		62EC6CAD1C26934500B2794E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6CAC1C26934500B2794E /* AppDelegate.swift */; };
 		62EC6CAF1C26934500B2794E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6CAE1C26934500B2794E /* ViewController.swift */; };
 		62EC6CB21C26934500B2794E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62EC6CB01C26934500B2794E /* Main.storyboard */; };
@@ -20,6 +25,7 @@
 		62EC6CDB1C26934500B2794E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6CDA1C26934500B2794E /* InterfaceController.swift */; };
 		62EC6CDD1C26934500B2794E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62EC6CDC1C26934500B2794E /* ExtensionDelegate.swift */; };
 		62EC6CDF1C26934500B2794E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62EC6CDE1C26934500B2794E /* Assets.xcassets */; };
+		62FD2FCE1C2CAEBA00F0CFC6 /* ConfirmacionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62FD2FCD1C2CAEBA00F0CFC6 /* ConfirmacionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +78,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		623AA8451C2746F70076D40A /* DatosPizza.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatosPizza.swift; sourceTree = "<group>"; };
+		623AA8491C274BEF0076D40A /* TamañoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TamañoController.swift"; sourceTree = "<group>"; };
+		623AA84B1C276AEB0076D40A /* MasaController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasaController.swift; sourceTree = "<group>"; };
+		623AA84D1C2774820076D40A /* QuesoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuesoController.swift; sourceTree = "<group>"; };
+		623AA84F1C277FCC0076D40A /* IngredientesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IngredientesController.swift; sourceTree = "<group>"; };
 		62EC6CA91C26934500B2794E /* TareaAppleWatchCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TareaAppleWatchCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62EC6CAC1C26934500B2794E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		62EC6CAE1C26934500B2794E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +102,7 @@
 		62EC6CDC1C26934500B2794E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		62EC6CDE1C26934500B2794E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62EC6CE01C26934500B2794E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62FD2FCD1C2CAEBA00F0CFC6 /* ConfirmacionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmacionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,10 +187,16 @@
 		62EC6CD91C26934500B2794E /* TareaAppleWatchCD WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				62EC6CDA1C26934500B2794E /* InterfaceController.swift */,
 				62EC6CDC1C26934500B2794E /* ExtensionDelegate.swift */,
+				62EC6CDA1C26934500B2794E /* InterfaceController.swift */,
+				623AA8451C2746F70076D40A /* DatosPizza.swift */,
+				623AA8491C274BEF0076D40A /* TamañoController.swift */,
+				623AA84B1C276AEB0076D40A /* MasaController.swift */,
+				623AA84D1C2774820076D40A /* QuesoController.swift */,
+				623AA84F1C277FCC0076D40A /* IngredientesController.swift */,
 				62EC6CDE1C26934500B2794E /* Assets.xcassets */,
 				62EC6CE01C26934500B2794E /* Info.plist */,
+				62FD2FCD1C2CAEBA00F0CFC6 /* ConfirmacionController.swift */,
 			);
 			path = "TareaAppleWatchCD WatchKit Extension";
 			sourceTree = "<group>";
@@ -362,8 +380,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623AA8461C2746F70076D40A /* DatosPizza.swift in Sources */,
+				623AA8501C277FCC0076D40A /* IngredientesController.swift in Sources */,
+				623AA84A1C274BEF0076D40A /* TamañoController.swift in Sources */,
+				62FD2FCE1C2CAEBA00F0CFC6 /* ConfirmacionController.swift in Sources */,
 				62EC6CDD1C26934500B2794E /* ExtensionDelegate.swift in Sources */,
+				623AA84E1C2774820076D40A /* QuesoController.swift in Sources */,
 				62EC6CDB1C26934500B2794E /* InterfaceController.swift in Sources */,
+				623AA84C1C276AEB0076D40A /* MasaController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -621,6 +645,7 @@
 				62EC6CE51C26934500B2794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62EC6CE71C26934500B2794E /* Build configuration list for PBXNativeTarget "TareaAppleWatchCD WatchKit App" */ = {
 			isa = XCConfigurationList;
@@ -629,6 +654,7 @@
 				62EC6CE91C26934500B2794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62EC6CEB1C26934500B2794E /* Build configuration list for PBXNativeTarget "TareaAppleWatchCD" */ = {
 			isa = XCConfigurationList;
@@ -637,6 +663,7 @@
 				62EC6CED1C26934500B2794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62EC6CEE1C26934500B2794E /* Build configuration list for PBXNativeTarget "TareaAppleWatchCDTests" */ = {
 			isa = XCConfigurationList;
@@ -645,6 +672,7 @@
 				62EC6CF01C26934500B2794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

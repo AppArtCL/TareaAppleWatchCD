@@ -1,15 +1,323 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6221" systemVersion="13E28" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3733"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="9515"/>
     </dependencies>
     <scenes>
-        <!--Interface Controller-->
+        <!--PantallaInicio-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModuleProvider="target"/>
+                <controller identifier="PantallaInicio" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="TareaAppleWatchCD_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="Bienvenido" textAlignment="center" id="Wic-YL-lRW">
+                            <color key="textColor" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="UE1-Nh-Hhf">
+                            <color key="color" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <label alignment="center" text="Por favor cree su pizza.     " textAlignment="center" numberOfLines="0" id="Bco-do-0ap"/>
+                        <button width="1" alignment="left" title="Crear Pizza" id="1Vo-6d-pqC">
+                            <connections>
+                                <action selector="crearPizza" destination="AgC-eL-Hgc" id="Iv8-hA-MOS"/>
+                            </connections>
+                        </button>
+                    </items>
+                </controller>
             </objects>
+            <point key="canvasLocation" x="250" y="265"/>
+        </scene>
+        <!--SeleccionTamaño-->
+        <scene sceneID="LjL-SM-eun">
+            <objects>
+                <controller identifier="SeleccionTamaño" id="rZ8-4X-v54" customClass="TamañoController" customModule="TareaAppleWatchCD_WatchKit_Extension">
+                    <items>
+                        <label alignment="left" text="Selección tamaño" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="JKI-vb-A0m">
+                            <color key="textColor" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="4EL-Gp-T3P">
+                            <color key="color" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <picker height="76" alignment="center" focusStyle="stack" id="WaX-u3-7eo">
+                            <connections>
+                                <action selector="pickerSelectedItemChanged:" destination="rZ8-4X-v54" id="NJ9-6i-jEx"/>
+                            </connections>
+                        </picker>
+                        <group width="1" alignment="left" id="KLX-zF-vc3">
+                            <items>
+                                <button width="66" alignment="center" title="Cancelar" id="8ii-UA-Ayy">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                    <connections>
+                                        <action selector="cancelarPedido" destination="rZ8-4X-v54" id="dfp-Mt-FgR"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="center" title="&gt;" id="oEN-j6-LD7">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irMasa" destination="rZ8-4X-v54" id="bu6-gQ-0Ph"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerTamaños" destination="WaX-u3-7eo" id="DtV-ID-NgQ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="479" y="263"/>
+        </scene>
+        <!--SeleccionMasa-->
+        <scene sceneID="HCC-lq-fxc">
+            <objects>
+                <controller identifier="SeleccionMasa" id="Dob-Re-4mC" customClass="MasaController" customModule="TareaAppleWatchCD_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Selección masa" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="7SM-1Y-NUk">
+                            <color key="textColor" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="hi6-Bp-2fd">
+                            <color key="color" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <picker height="76" alignment="center" focusStyle="stack" id="1jn-dO-BWh">
+                            <connections>
+                                <action selector="pickerSelectedItemChanged:" destination="Dob-Re-4mC" id="Vwr-qZ-rdZ"/>
+                            </connections>
+                        </picker>
+                        <group width="1" alignment="left" id="idQ-ui-bgA">
+                            <items>
+                                <button width="66" alignment="center" title="&lt;" id="Gf1-ej-aoX">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irTamaño" destination="Dob-Re-4mC" id="QV4-52-koS"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="center" title="&gt;" id="cOk-wz-l8O">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irQueso" destination="Dob-Re-4mC" id="Bfk-ks-4PP"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerMasas" destination="1jn-dO-BWh" id="Fno-ra-n0P"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="695" y="265"/>
+        </scene>
+        <!--SeleccionQueso-->
+        <scene sceneID="JTj-jp-zPP">
+            <objects>
+                <controller identifier="SeleccionQueso" id="okC-Mh-bKJ" customClass="QuesoController" customModule="TareaAppleWatchCD_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Selección queso" textAlignment="center" id="67e-lN-Ww7">
+                            <color key="textColor" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="jxy-KB-rhi">
+                            <color key="color" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <picker height="76" alignment="center" focusStyle="stack" id="5Qn-23-emO">
+                            <connections>
+                                <action selector="pickerSelectedItemChanged:" destination="okC-Mh-bKJ" id="zMp-Bo-wE3"/>
+                            </connections>
+                        </picker>
+                        <group width="1" alignment="left" id="AYh-Py-Xtz">
+                            <items>
+                                <button width="66" alignment="center" title="&lt;" id="thX-6F-EgL">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irMasa" destination="okC-Mh-bKJ" id="6Wo-vK-cEt"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="center" title="&gt;" id="bFO-bz-7gv">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irIngredientes" destination="okC-Mh-bKJ" id="I6H-F6-dAV"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="pickerQuesos" destination="5Qn-23-emO" id="k48-WX-OfA"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="695" y="507"/>
+        </scene>
+        <!--Confirmacion-->
+        <scene sceneID="DHe-rk-5DU">
+            <objects>
+                <controller identifier="Confirmacion" id="uek-gx-N5N" customClass="ConfirmacionController" customModule="TareaAppleWatchCD_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Confirmar pedido" textAlignment="center" minimumScaleFactor="0.80000000000000004" id="nIq-0b-SMz">
+                            <color key="textColor" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="cHl-cT-sgF">
+                            <color key="color" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <group width="1" alignment="left" id="9gp-mu-qQP">
+                            <items>
+                                <label alignment="left" text="Tamaño:" minimumScaleFactor="0.80000000000000004" id="cuK-Mx-Nug">
+                                    <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="Label" id="CDd-ie-qUc">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="n7H-3m-6p2">
+                            <items>
+                                <label alignment="left" text="Masa:" minimumScaleFactor="0.80000000000000004" id="aAB-L4-Fdo">
+                                    <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="Label" minimumScaleFactor="0.80000000000000004" id="aud-qM-tZE">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="XKZ-fi-OFP">
+                            <items>
+                                <label alignment="left" text="Queso:" minimumScaleFactor="0.80000000000000004" id="Gg3-tb-1Y1">
+                                    <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                </label>
+                                <label alignment="left" text="Label" minimumScaleFactor="0.80000000000000004" id="dgM-QC-H7u">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="dfK-SY-411">
+                            <items>
+                                <label alignment="left" text="Ingredientes:" minimumScaleFactor="0.80000000000000004" id="5Bb-KJ-9Ed">
+                                    <fontDescription key="font" type="boldSystem" pointSize="14"/>
+                                </label>
+                                <label width="1" alignment="left" text="Label" numberOfLines="3" minimumScaleFactor="0.80000000000000004" id="CKV-lR-sXr">
+                                    <fontDescription key="font" type="system" pointSize="14"/>
+                                </label>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" id="6wf-eW-Ylo">
+                            <items>
+                                <button width="66" alignment="center" title="Cocinar" id="xXQ-9f-3cj">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                    <connections>
+                                        <action selector="procesarPedido" destination="uek-gx-N5N" id="Xk4-bc-VVM"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="center" title="Cancelar" id="2SR-gK-uda">
+                                    <fontDescription key="font" type="system" pointSize="13"/>
+                                    <connections>
+                                        <action selector="cancelarPedido" destination="uek-gx-N5N" id="84O-j5-KJ9"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="etiquetaIngredientes" destination="CKV-lR-sXr" id="M9q-Dx-fg9"/>
+                        <outlet property="etiquetaMasa" destination="aud-qM-tZE" id="tWh-8Y-pyx"/>
+                        <outlet property="etiquetaQueso" destination="dgM-QC-H7u" id="cFG-wc-ZT8"/>
+                        <outlet property="etiquetaTamaño" destination="CDd-ie-qUc" id="UXc-U6-XmF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="250" y="517.25"/>
+        </scene>
+        <!--SeleccionIngredientes-->
+        <scene sceneID="gzI-f0-PYb">
+            <objects>
+                <controller identifier="SeleccionIngredientes" spacing="1" id="g76-Td-W7g" customClass="IngredientesController" customModule="TareaAppleWatchCD_WatchKit_Extension">
+                    <items>
+                        <label alignment="center" text="Ingredientes" textAlignment="center" id="wWe-o5-Bf4">
+                            <color key="textColor" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <separator alignment="left" id="9EL-xX-tqN">
+                            <color key="color" red="1" green="1" blue="0.35500437060000001" alpha="1" colorSpace="calibratedRGB"/>
+                        </separator>
+                        <switch width="1" height="30" alignment="left" title="Jamón" minimumScaleFactor="0.80000000000000004" id="Hd9-wz-MbV">
+                            <connections>
+                                <action selector="swJamon:" destination="g76-Td-W7g" id="1eG-vm-GYu"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Pepperoni" minimumScaleFactor="0.80000000000000004" id="yPU-Xd-F3K">
+                            <connections>
+                                <action selector="swPepperoni:" destination="g76-Td-W7g" id="GoY-4w-t05"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Pavo" minimumScaleFactor="0.80000000000000004" id="vYR-J9-XSQ">
+                            <connections>
+                                <action selector="swPavo:" destination="g76-Td-W7g" id="LHI-cK-mQD"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Salchicha" minimumScaleFactor="0.80000000000000004" id="ElB-A4-f2u">
+                            <connections>
+                                <action selector="swSalchicha:" destination="g76-Td-W7g" id="jsj-c6-dlI"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Aceituna" minimumScaleFactor="0.80000000000000004" id="JnV-3p-RnW">
+                            <connections>
+                                <action selector="swAceituna:" destination="g76-Td-W7g" id="ZPp-dQ-76r"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Cebolla" minimumScaleFactor="0.80000000000000004" id="w9V-Lp-8za">
+                            <connections>
+                                <action selector="swCebolla:" destination="g76-Td-W7g" id="C6g-K5-sG9"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Pimiento" minimumScaleFactor="0.80000000000000004" id="5wh-rt-Ozl">
+                            <connections>
+                                <action selector="swPimiento:" destination="g76-Td-W7g" id="hjt-sr-rTB"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Piña" minimumScaleFactor="0.80000000000000004" id="92X-lj-wHD">
+                            <connections>
+                                <action selector="swPiña:" destination="g76-Td-W7g" id="As1-NA-yx5"/>
+                            </connections>
+                        </switch>
+                        <switch width="1" height="30" alignment="left" title="Anchoa" minimumScaleFactor="0.80000000000000004" id="uqm-F2-Lsc">
+                            <connections>
+                                <action selector="swAnchoa:" destination="g76-Td-W7g" id="Evq-Ae-KNz"/>
+                            </connections>
+                        </switch>
+                        <group width="1" alignment="left" id="7I1-yC-nYh">
+                            <items>
+                                <button width="66" alignment="center" title="&lt;" id="6Ll-jZ-Ii3">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irQueso" destination="g76-Td-W7g" id="mLt-TI-YH9"/>
+                                    </connections>
+                                </button>
+                                <button width="66" alignment="center" title="&gt;" id="Xtb-NZ-qDZ">
+                                    <fontDescription key="font" type="boldSystem" pointSize="28"/>
+                                    <connections>
+                                        <action selector="irConfirmacion" destination="g76-Td-W7g" id="TSl-1b-9sV"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="swAceituna" destination="JnV-3p-RnW" id="oli-Zy-jfy"/>
+                        <outlet property="swAnchoa" destination="uqm-F2-Lsc" id="znD-Uu-RnN"/>
+                        <outlet property="swCebolla" destination="w9V-Lp-8za" id="CUt-Qx-7q6"/>
+                        <outlet property="swJamon" destination="Hd9-wz-MbV" id="YIT-Er-X3G"/>
+                        <outlet property="swPavo" destination="vYR-J9-XSQ" id="ddY-a2-VSZ"/>
+                        <outlet property="swPepperoni" destination="yPU-Xd-F3K" id="Skz-uw-njy"/>
+                        <outlet property="swPimiento" destination="5wh-rt-Ozl" id="XUy-tb-kt9"/>
+                        <outlet property="swPiña" destination="92X-lj-wHD" id="Xzi-oH-Jh7"/>
+                        <outlet property="swSalchicha" destination="ElB-A4-f2u" id="UQT-vO-rAL"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="479" y="601.25"/>
         </scene>
     </scenes>
 </document>
